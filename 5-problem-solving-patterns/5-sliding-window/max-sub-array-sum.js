@@ -39,25 +39,37 @@ function maxSubarraySum(arr, num) {
 // Refactor
 // Time Complexity - O(N)
 // colt's solution
-function maxSubarraySum(arr, num){
+function maxSubarraySum(arr, num) {
+    // Check if the length of the array is less than `num`.
     if (arr.length < num) return null;
 
+    // Initialize two variables: `maxSum` to keep track of the maximum sum found,
+    // and `tempSum` to keep track of the sum of the current subarray.
     let maxSum = 0;
     let tempSum = 0;
 
+    // Calculate the initial sum of the first `num` elements in the array.
     for (let i = 0; i < num; i++) {
         maxSum += arr[i];
     }
+
+    // Set `tempSum` to the initial value of `maxSum`.
     tempSum = maxSum;
+
+    // Start a loop from index `num` to the end of the array.
     for (let i = num; i < arr.length; i++) {
-        //the tempSum is updated by subtracting the element that is no longer in the window (arr[i - num]) and adding the current element (arr[i]).
-        //delete first element in the array and add one:
-        //So tempsum = tempsum - arr[i-num] + arr[i], for num = 3 and i = num means tempsum = tempsum - arr[0] + arr[3]. Which is what you're expecting.
+        // Update `tempSum` by subtracting the element that is no longer in the window (arr[i - num])
+        // and adding the current element (arr[i]).
         tempSum = tempSum - arr[i - num] + arr[i];
+
+        // Update `maxSum` with the maximum value between the current `maxSum` and `tempSum`.
         maxSum = Math.max(maxSum, tempSum);
     }
+
+    // Return the maximum sum found.
     return maxSum;
 }
+
 maxSubarraySum([1,2,5,2,8,1,5,9,3],3)
 
 //3 soluton:

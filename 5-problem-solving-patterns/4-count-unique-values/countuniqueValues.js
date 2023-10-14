@@ -27,8 +27,7 @@ function countUniqueValues(arr) {
     //Once the loop finishes, the function returns i + 1, which represents the count of unique values in the array.
     return i + 1;
 }
-
-console.log(countUniqueValues([1, 2, 3, 4])); // 7
+console.log(countUniqueValues([1, 2, 3, 4])); //4
 
 //2 Exemple:
 function countUniqueValues(arr){

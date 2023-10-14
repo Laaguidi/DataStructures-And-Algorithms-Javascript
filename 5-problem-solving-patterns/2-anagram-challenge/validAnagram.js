@@ -15,9 +15,11 @@ function validAnagram(first, second) {
     for (let i = 0; i < second.length; i++) {
         let letter = second[i];
         // can't find letter or letter is zero then it's not an anagram
+        // it's not the same letters
         if (!lookup[letter]) {
             return false;
         } else {
+            // if we find the same letter we decrement by -1
             lookup[letter] -= 1;
         }
     }

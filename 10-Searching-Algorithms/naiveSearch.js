@@ -32,18 +32,15 @@
 }*/
 
 // Refactored :
-//["wowomgzomg", "abc"]
+
 function naiveStringSearch(long, short) {
     let count = 0;
 
     for (let i = 0; i < long.length; i++) {
 
         for (let j = 0; j < short.length; j++) {
-            console.log(short[j], long[i+j])
-            if (short[j] !== long[i+j]){
-                console.log("Break")
-                break;
-            };
+
+            if (short[j] !== long[i+j]) break;
             if (j === short.length - 1) count++;
         }
 
@@ -52,7 +49,4 @@ function naiveStringSearch(long, short) {
     return count;
 }
 
-//console.log(naiveStringSearch("wowomgzomg", "abc"));  // 0
 console.log(naiveStringSearch("lorie loled", "lol"));  // 1
-//console.log(naiveStringSearch("harold said haha in hamburg", "haha"));  // 1
-//console.log(naiveStringSearch("wowomgzomg", "omg"));  // 2

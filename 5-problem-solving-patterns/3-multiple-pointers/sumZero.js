@@ -19,7 +19,6 @@ function sumZero(arr){
         let sum = arr[left] + arr[right];
         if(sum === 0){
             return [arr[left], arr[right]];
-            //Si le sumn'est pas nul, la fonction vérifie s'il est supérieur à zéro. Si tel est le cas, cela signifie que la paire de nombres actuelle est trop grande et que le rightpointeur est décrémenté de un pour passer à une valeur plus petite.
         } else if(sum > 0){
             right--;
         } else {
@@ -27,4 +26,6 @@ function sumZero(arr){
         }
     }
 }
+
+
 

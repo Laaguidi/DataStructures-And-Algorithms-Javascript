@@ -3,11 +3,11 @@ function charCount(str){
     var result = {};
     //loop over string, foreach character...
     for (var i = 0; i < str.length; i++){
-        // each caracter in the string
+        //index caracter in the string
         var char = str[i];
         //if the char is number/letter and is a key of object add 1 to count:
         //if it is already in there:
-
+        //It checks if the character char already exists as a key in the result object. If it does, it increments the count associated with that character by 1.
         if (result[char] > 0) {
             result[char]++;
         }
@@ -33,6 +33,7 @@ function charCount1(str) {
     var obj = {};
     for (var i = 0; i < str.length; i++) {
         var char = str[i].toLowerCase();
+        //.test(char) is a method called on the regular expression object. The .test() method is used to check whether a given string (in this case, the value of the char variable) matches the pattern defined by the regular expression. It returns true if there's a match and false if there isn't.
         if (/[a-z0-9]/.test(char)) {
             if (obj[char] > 0) {
                 obj[char]++;
