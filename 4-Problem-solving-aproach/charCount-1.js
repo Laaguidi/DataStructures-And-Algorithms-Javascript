@@ -9,7 +9,7 @@ function charCount(str){
         //if it is already in there:
         //It checks if the character char already exists as a key in the result object. If it does, it increments the count associated with that character by 1.
         if (result[char] > 0) {
-            result[char]++;
+            result[char]++; //hello l = 2
         }
         //if the char is not a number/letter and object, add it to object and set value to 1:
         else {
@@ -56,6 +56,8 @@ function charCount2(str) {
     }
     return obj;
 }
+
+
 ///////////////////////////
 function charCount3(str) {
     var obj = {};
