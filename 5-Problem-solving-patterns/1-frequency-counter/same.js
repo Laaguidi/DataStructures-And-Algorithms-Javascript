@@ -31,6 +31,8 @@ function same2(arr1, arr2){
     let frequencyCounter1 = {}
     let frequencyCounter2 = {}
     // Count the frequency of each value in arr1
+    //this means evaluate to the value on the left if it is truthy (if converted to a boolean, it would be true), otherwise evaluate to the value on the right.
+    //In this specific case, this is saying "evaluate to the value in object  at key val, however if it's undefined (not in the object yet) then use 0 as a default value"
     for(let val of arr1){
         // Increment the count of each value in frequencyCounter1
         frequencyCounter1[val] = (frequencyCounter1[val] || 0) + 1
