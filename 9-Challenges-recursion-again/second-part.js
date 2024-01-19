@@ -1,15 +1,4 @@
-//Recursion CHALLENGE Problem Set Solutions Part 2
-//capitalizeWords Solution
 
-function capitalizeWords (array) {
-    if (array.length === 1) {
-        return [array[0].toUpperCase()];
-    }
-    let res = capitalizeWords(array.slice(0, -1));
-    res.push(array.slice(array.length-1)[0].toUpperCase());
-    return res;
-
-}
 //nestedEvenSum Solution
 
 function nestedEvenSum (obj, sum=0) {
